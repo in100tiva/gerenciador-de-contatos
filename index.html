@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Contatos</h1>
+        <div class="form-container">
+            <h2>Adicionar Contato</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Telefone" required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+        <div class="contacts-container">
+            <h2>Lista de Contatos</h2>
+            <ul id="contactsList"></ul>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Contato</h2>
+            <form id="editForm">
+                <input type="text" id="editName" placeholder="Nome" required>
+                <input type="email" id="editEmail" placeholder="Email" required>
+                <input type="text" id="editPhone" placeholder="Telefone" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="confirmation-modal">
+        <div class="confirmation-modal-content">
+            <h2>Tem certeza que deseja excluir este contato?</h2>
+            <button id="confirmButton">Confirmar</button>
+            <button id="cancelButton">Cancelar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
